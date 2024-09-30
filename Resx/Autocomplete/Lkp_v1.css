@@ -1,0 +1,37 @@
+﻿
+.xLkp
+{
+	background-color: rgb(242,249,255) !Important;
+}
+.xlkp-img
+{
+	cursor:pointer;
+	vertical-align:top;
+}
+.xlkp-img-td
+{
+    width: 20px;
+    background-image: url('/App/Resx/xLkp/Imgs/radFormSprite.png'); 
+    _background-image: url('/App/Resx/xLkp/Imgs/radFormSprite.png'); 
+    background-position: -89px -176px;
+}
+.xlkp-img-td-a
+{
+    overflow: hidden;
+    display: block;
+    position: relative;
+    outline: none;
+}
+.xlkp-text-td
+{
+    padding-right:5px;
+    padding-left:2px;
+    border: solid 1px silver;
+    border-right:0px;
+}
+.xlkp-text-td-input
+{
+    width: 100%; 
+    border: 0px;
+    height:19px;
+}

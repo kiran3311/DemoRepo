@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Targets>
+  <Target Name="C:\Users\rutuja.bhokare\AppData\Local\Temp\tmp6C0E.tmp.cadir\bin\App_Code.dll">
+   <Modules>
+    <Module Name="app_code.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="MyCharts" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DrawBarChart(System.Data.DataSet)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\App_Code" File="Charts.cs" Line="181">'MyCharts.DrawBarChart(DataSet)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Impersonator">
+       <Types>
+        <Type Name="WrappedImpersonationContext" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnNativeResourcesShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1049" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="NonBreaking">
+           <Issue Certainty="50" Level="CriticalError">Implement IDisposable on 'WrappedImpersonationContext'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#CloseHandle(System.IntPtr)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'WrappedImpersonationContext.CloseHandle(IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'WrappedImpersonationContext.CloseHandle(IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LogonUser(System.String,System.String,System.String,Impersonator.WrappedImpersonationContext+LogonType,Impersonator.WrappedImpersonationContext+LogonProvider,System.IntPtr&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'WrappedImpersonationContext.LogonUser(string, string, string, WrappedImpersonationContext.LogonType, WrappedImpersonationContext.LogonProvider, ref IntPtr)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'WrappedImpersonationContext.LogonUser(string, string, string, WrappedImpersonationContext.LogonType, WrappedImpersonationContext.LogonProvider, ref IntPtr)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="NACH_Application">
+       <Types>
+        <Type Name="cls_DBConnection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'cls_DBConnection' because it creates members of the following IDisposable types: 'OracleConnection', 'OracleCommand'. If 'cls_DBConnection' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#gl_ExeDataSet(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\App_Code" File="cls_DBConnection.cs" Line="83">The query string passed to 'OracleCommand.CommandText.set(string)' in 'cls_DBConnection.gl_ExeDataSet(string)' could contain the following variables 'm_str'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#gl_ExeDataTable(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\App_Code" File="cls_DBConnection.cs" Line="96">The query string passed to 'OracleCommand.CommandText.set(string)' in 'cls_DBConnection.gl_ExeDataTable(string)' could contain the following variables 'm_str'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#gl_ExeNonQuery(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\App_Code" File="cls_DBConnection.cs" Line="48">The query string passed to 'OracleCommand.CommandText.set(string)' in 'cls_DBConnection.gl_ExeNonQuery(string)' could contain the following variables 'm_str'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#gl_ExeReader(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\App_Code" File="cls_DBConnection.cs" Line="71">The query string passed to 'OracleCommand.CommandText.set(string)' in 'cls_DBConnection.gl_ExeReader(string)' could contain the following variables 'm_str'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#gl_exeScalar(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\App_Code" File="cls_DBConnection.cs" Line="59">The query string passed to 'OracleCommand.CommandText.set(string)' in 'cls_DBConnection.gl_exeScalar(string)' could contain the following variables 'm_str'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="cls_General" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ChkSum(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'cls_General.ChkSum(string)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'cls_General.ChkSum(string)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'DestFile' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EnFunc(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'cls_General.EnFunc(string, string)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'cls_General.EnFunc(string, string)' so that it is no longer visible from outside its assembly.</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'SourceFile' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'DestFile' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\rutuja.bhokare\AppData\Local\Temp\tmp6C0E.tmp.cadir\bin\App_Web_43pe2thl.dll">
+   <Modules>
+    <Module Name="app_web_43pe2thl.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Approve_Mandate_DestInwardMandateBatchwiseApproval" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnDownloadImage_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateBatchwiseApproval.aspx.cs" Line="1485">Object 'zipFile' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateBatchwiseApproval.btnDownloadImage_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1485</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetResponseFromAPI(APITxnReqObj)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateBatchwiseApproval.aspx.cs" Line="2134">Object 'request.GetRequestStream()' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateBatchwiseApproval.GetResponseFromAPI(APITxnReqObj)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2134</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateBatchwiseApproval.aspx.cs" Line="2134">Object 'streamWriter' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateBatchwiseApproval.GetResponseFromAPI(APITxnReqObj)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2134</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSignature(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateBatchwiseApproval.aspx.cs" Line="2097">Object 'request.GetRequestStream()' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateBatchwiseApproval.GetSignature(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2097</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateBatchwiseApproval.aspx.cs" Line="2097">Object 'streamWriter' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateBatchwiseApproval.GetSignature(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2097</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\rutuja.bhokare\AppData\Local\Temp\tmp6C0E.tmp.cadir\bin\App_Web_hem05fgd.dll">
+   <Modules>
+    <Module Name="app_web_hem05fgd.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Register_Mandate_UploadImageData" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#cvOk_ServerValidate(System.Object,System.Web.UI.WebControls.ServerValidateEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Register Mandate" File="UploadImageData.aspx.cs" Line="1122">Object 'File.OpenRead(this.Server.MapPath(this.tmpZip))' can be disposed more than once in method 'Register_Mandate_UploadImageData.cvOk_ServerValidate(object, ServerValidateEventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1122</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Register Mandate" File="UploadImageData.aspx.cs" Line="1311">Object 'File.OpenRead(this.Server.MapPath(this.tmpZip))' can be disposed more than once in method 'Register_Mandate_UploadImageData.cvOk_ServerValidate(object, ServerValidateEventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1311</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Register Mandate" File="UploadImageData.aspx.cs" Line="1311">Object 'S' can be disposed more than once in method 'Register_Mandate_UploadImageData.cvOk_ServerValidate(object, ServerValidateEventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1311</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Register Mandate" File="UploadImageData.aspx.cs" Line="1122">Object 's' can be disposed more than once in method 'Register_Mandate_UploadImageData.cvOk_ServerValidate(object, ServerValidateEventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1122</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\rutuja.bhokare\AppData\Local\Temp\tmp6C0E.tmp.cadir\bin\App_Web_q24xp33g.dll">
+   <Modules>
+    <Module Name="app_web_q24xp33g.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Approve_Mandate_DestInwMandateView" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnDownloadImage_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwMandateView.aspx.cs" Line="1503">Object 'zipFile' can be disposed more than once in method 'Approve_Mandate_DestInwMandateView.btnDownloadImage_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1503</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\rutuja.bhokare\AppData\Local\Temp\tmp6C0E.tmp.cadir\bin\App_Web_ritjssrx.dll">
+   <Modules>
+    <Module Name="app_web_ritjssrx.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="SetUp_ResetPasswordNew" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetSearch(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\SetUp" File="ResetPasswordNew.aspx.cs" Line="57">The query string passed to 'OracleDataAdapter.OracleDataAdapter(string, OracleConnection)' in 'SetUp_ResetPasswordNew.GetSearch(string)' could contain the following variables 'prefixText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SetUp_ResetPwd" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetAutoCompleteData(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\SetUp" File="ResetPwd.aspx.cs" Line="76">The query string passed to 'OracleDataAdapter.OracleDataAdapter(string, OracleConnection)' in 'SetUp_ResetPwd.GetAutoCompleteData(string)' could contain the following variables 'username'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUsrId(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\SetUp" File="ResetPwd.aspx.cs" Line="93">The query string passed to 'OracleDataAdapter.OracleDataAdapter(string, OracleConnection)' in 'SetUp_ResetPwd.GetUsrId(string)' could contain the following variables 'prefixText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SetUp_Test" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetAutoCompleteData(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\SetUp" File="Test.aspx.cs" Line="77">The query string passed to 'OracleDataAdapter.OracleDataAdapter(string, OracleConnection)' in 'SetUp_Test.GetAutoCompleteData(string)' could contain the following variables 'username'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUsrId(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\SetUp" File="Test.aspx.cs" Line="94">The query string passed to 'OracleDataAdapter.OracleDataAdapter(string, OracleConnection)' in 'SetUp_Test.GetUsrId(string)' could contain the following variables 'prefixText'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\rutuja.bhokare\AppData\Local\Temp\tmp6C0E.tmp.cadir\bin\App_Web_t4dzrfty.dll">
+   <Modules>
+    <Module Name="app_web_t4dzrfty.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Master_CheckerUser" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#bindata()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Master" File="CheckerUser.aspx.cs" Line="59">The query string passed to 'OracleCommand.CommandText.set(string)' in 'Master_CheckerUser.bindata()' could contain the following variables 'userid'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GridView1_RowCommand(System.Object,System.Web.UI.WebControls.GridViewCommandEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Master" File="CheckerUser.aspx.cs" Line="125">The query string passed to 'OracleCommand.CommandText.set(string)' in 'Master_CheckerUser.GridView1_RowCommand(object, GridViewCommandEventArgs)' could contain the following variables 'Accpt_Comments.Text', 'DateTime.Now.ToString("dd/MM/yyyy")', 'USER_srnO', 'Accpt_Comments.Text', 'DateTime.Now.ToString("dd/MM/yyyy")', 'USER_srnO'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Master" File="CheckerUser.aspx.cs" Line="172">The query string passed to 'OracleCommand.CommandText.set(string)' in 'Master_CheckerUser.GridView1_RowCommand(object, GridViewCommandEventArgs)' could contain the following variables 'Reject_Comments.Text', 'DateTime.Now.ToString("dd/MM/yyyy")', 'USER_srnO', 'Reject_Comments.Text', 'DateTime.Now.ToString("dd/MM/yyyy")', 'USER_srnO'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\rutuja.bhokare\AppData\Local\Temp\tmp6C0E.tmp.cadir\bin\App_Web_uhlvvtdu.dll">
+   <Modules>
+    <Module Name="app_web_uhlvvtdu.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Approve_Mandate_DestInwardMandateFinacle" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnDownloadImage_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateFinacle.aspx.cs" Line="1628">Object 'zipFile' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateFinacle.btnDownloadImage_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1628</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetResponseFromAPI(APITxnReqObj)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateFinacle.aspx.cs" Line="2284">Object 'request.GetRequestStream()' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateFinacle.GetResponseFromAPI(APITxnReqObj)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2284</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateFinacle.aspx.cs" Line="2284">Object 'streamWriter' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateFinacle.GetResponseFromAPI(APITxnReqObj)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2284</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetSignature(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateFinacle.aspx.cs" Line="2247">Object 'request.GetRequestStream()' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateFinacle.GetSignature(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2247</Issue>
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Approve Mandate" File="DestInwardMandateFinacle.aspx.cs" Line="2247">Object 'streamWriter' can be disposed more than once in method 'Approve_Mandate_DestInwardMandateFinacle.GetSignature(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2247</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\rutuja.bhokare\AppData\Local\Temp\tmp6C0E.tmp.cadir\bin\App_Web_zzfbcvbs.dll">
+   <Modules>
+    <Module Name="app_web_zzfbcvbs.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Options_Query" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnDownloadImage_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-11-12 04:32:05Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="e:\Rutuja\UBI\MMS1 Git\MMS1\MMS\Options" File="Query.aspx.cs" Line="773">Object 'zipFile' can be disposed more than once in method 'Options_Query.btnDownloadImage_Click(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 773</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 2284</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+   <Name>Move P/Invokes to NativeMethods class</Name>
+   <Description>This type contains members with the DllImport attribute. Members with the DllImport attribute should be contained in classes named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Description>
+   <Resolution Name="Default">Because it is a P/Invoke method, {0} should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182161.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401">
+   <Name>P/Invokes should not be visible</Name>
+   <Description>Interop layer should not be public. The DllImport attribute should not be applied to publicly accessible members (public or protected).</Description>
+   <Resolution Name="Default">Change the accessibility of P/Invoke {0} so that it is no longer visible from outside its assembly.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182209.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">CriticalError</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Rethrow to preserve stack details</Name>
+   <Description>Use the IL rethrow instruction to preserve original stack details when re-raising a caught exception.</Description>
+   <Resolution Name="Default">{0} rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101">
+   <Name>Specify marshaling for P/Invoke string arguments</Name>
+   <Description>When marshaling strings as ANSI (or as Auto on Win9x), some characters may be changed. If best-fit mapping is on, strings that appear different in Unicode will be marshaled to identical ANSI strings, which may lead to incorrect security decisions. Turning best-fit mapping off reduces this risk, as all characters without equivalents are mapped to '?'. Also, note that CharSet.Ansi is the default setting for all string marshaling; Unicode marshaling must be specified explicitly, either as a CharSet setting of DllImport or StructLayout, or as a MarshalAs attribute with a Unicode (or system-dependent) UnmanagedType.</Description>
+   <Resolution Name="ParameterImplicitAnsi">To reduce security risk, marshal parameter {0} as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182319.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnNativeResourcesShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1049">
+   <Name>Types that own native resources should be disposable</Name>
+   <Description>Types that allocate unmanaged resources should implement IDisposable to allow callers to release those resources on demand. Failure to implement IDisposable can result in unmanaged resources being unavailable or underutilized.</Description>
+   <Resolution Name="Default">Implement IDisposable on {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182173.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

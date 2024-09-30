@@ -1,0 +1,102 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Site, App_Web_site.master.cdcab7d2" %>
+
+<%@ Register TagPrefix="uc" TagName="ErrorCtrll" Src="~/Control/ErrorCtrll.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<%-- <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script> --%>
+<%--<script src="Scripts/jquery-1.4.1.js" type="text/javascript"></script>--%>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <script src="Scripts/html5shiv.min.js"></script>
+    <script src="Scripts/respond.min.js"></script>
+    <link rel="shortcut icon" href="Images/favicon.ico" />
+    <title></title>    
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="~/Styles/Forms.css" />
+    <%--<script src="<%#ResolveUrl("~") %>Resx/DialogCtrl/jquery-1.4.1.min.js" type="text/javascript"></script>--%>
+    <link href="<%#ResolveUrl("~") %>Resx/Autocomplate/Lkp_v1.css" rel="stylesheet" type="text/css" />
+    <link href="<%#ResolveUrl("~") %>Resx/Autocomplate/jquery.autocomplete.css" rel="stylesheet"
+        type="text/css" />
+    <link href="<%#ResolveUrl("~") %>Resx/DialogCtrl/DialogCtrl_Buttons.css" rel="stylesheet"
+        type="text/css" />
+    <link href="<%#ResolveUrl("~") %>Resx/DialogCtrl/DialogCtrl.css" rel="stylesheet"
+        type="text/css" />
+    <script src="<%#ResolveUrl("~") %>Resx/Autocomplate/jquery.autocomplete.min.js" type="text/javascript"></script>
+    <script src="<%#ResolveUrl("~") %>Resx/Autocomplate/xLkp_v1.js" type="text/javascript"></script>
+    <script src="<%#ResolveUrl("~") %>Resx/DialogCtrl/DialogCtrl.js" type="text/javascript"></script> 
+    <script language="JavaScript" type="text/javascript">
+        javascript: window.history.forward(1);
+    </script>
+
+    <script type="text/javascript">
+        function disableRightClick() {
+            //            alert("Sorry, right click is not allowed !!");
+            return false;
+        }
+</script> 
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    
+    </asp:ContentPlaceHolder>
+</head>
+ <%--oncontextmenu=" return disableRightClick();" --%>
+<body>
+
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header" style="border:1px solid black;">
+            <div class="title">
+                <h1>                    
+                    <asp:Image id="Img1" runat="server" 
+                    style="
+                    margin-bottom: -12%;
+                    width: 180px;" />
+                </h1>
+            </div>
+           
+            <uc:ErrorCtrll ID="ucErrorCtrll" runat="server" />
+            <%--<div class="loginDisplay" style="color: Navy; font-weight: bold">--%>
+            <div style="font-weight: bold; font-size:medium; text-align:right">
+            <asp:LinkButton ID="lnkHome" Style="color: Red" runat="server" OnClick="lnkHome_Click"
+                    Text="Go To Home"></asp:LinkButton>
+            </div>
+            <div class="loginDisplay" style="font-weight: bold">
+	     <asp:Label ID="lstlogindt" runat="server"> </asp:Label>	
+            
+                Welcome,
+                <asp:Literal ID="ltlUserName" runat="server"></asp:Literal>
+                <%--<asp:LinkButton ID="lnkBtnLogout" Visible="false" Style="color: Red" runat="server" OnClick="lnkBtnLogout_Click"
+                    Text="Sign Out"></asp:LinkButton>--%>
+                <div>
+                    <asp:Label ID="Label1" runat="server"></asp:Label></div>
+                <%--<input type="hidden" id="_ispostback" value="<%=Page.IsPostBack.ToString()%>" />--%>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    MaximumDynamicDisplayLevels="2" IncludeStyleBlock="false" Orientation="Horizontal" ToolTip="hi">
+                    <DynamicHoverStyle CssClass="DynamicHover"/>
+                    <DynamicMenuItemStyle CssClass="DynamicMenuItem" />
+                    <DynamicSelectedStyle CssClass="DynamicHover"  />
+                    <StaticHoverStyle CssClass="staticHover" />
+                    <StaticMenuItemStyle CssClass="StaticMenuItem" ItemSpacing="1px" />
+                    <StaticSelectedStyle CssClass="staticHover" />                    
+                </asp:Menu>
+            </div>
+        </div>
+        <input id="hiddRootPath" type="hidden" value="<%=Request.ApplicationPath %>" />
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>

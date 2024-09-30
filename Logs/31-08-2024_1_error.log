@@ -1,0 +1,174 @@
+31-08-2024 11:48:57    at System.Web.Security.FormsAuthentication.SetAuthCookie(String userName, Boolean createPersistentCookie, String strCookiePath)
+   at System.Web.Security.FormsAuthentication.RedirectFromLoginPage(String userName, Boolean createPersistentCookie, String strCookiePath)
+   at Login.btnLogin_Click(Object sender, EventArgs e)
+The application is configured to issue secure cookies. These cookies require the browser to issue the request over SSL (https protocol). However, the current request is not over SSL.
+
+31-08-2024 11:48:58    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:48:59    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:01    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:01    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:10    at System.Web.Security.FormsAuthentication.SetAuthCookie(String userName, Boolean createPersistentCookie, String strCookiePath)
+   at System.Web.Security.FormsAuthentication.RedirectFromLoginPage(String userName, Boolean createPersistentCookie, String strCookiePath)
+   at Login.btnLogin_Click(Object sender, EventArgs e)
+The application is configured to issue secure cookies. These cookies require the browser to issue the request over SSL (https protocol). However, the current request is not over SSL.
+
+31-08-2024 11:50:10    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:10    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:10    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:18    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:18    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:18    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:26    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:26    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:34    at System.Web.Security.FormsAuthentication.SetAuthCookie(String userName, Boolean createPersistentCookie, String strCookiePath)
+   at System.Web.Security.FormsAuthentication.RedirectFromLoginPage(String userName, Boolean createPersistentCookie, String strCookiePath)
+   at Login.btnLogin_Click(Object sender, EventArgs e)
+The application is configured to issue secure cookies. These cookies require the browser to issue the request over SSL (https protocol). However, the current request is not over SSL.
+
+31-08-2024 11:50:34    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:34    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:50:34    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:55:28    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:55:42    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:55:42    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:56:11    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:56:11    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:56:31    at System.Web.Security.FormsAuthentication.SetAuthCookie(String userName, Boolean createPersistentCookie, String strCookiePath)
+   at System.Web.Security.FormsAuthentication.RedirectFromLoginPage(String userName, Boolean createPersistentCookie, String strCookiePath)
+   at Login.btnLogin_Click(Object sender, EventArgs e)
+The application is configured to issue secure cookies. These cookies require the browser to issue the request over SSL (https protocol). However, the current request is not over SSL.
+
+31-08-2024 11:56:31    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:56:31    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+

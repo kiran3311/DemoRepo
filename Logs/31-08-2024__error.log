@@ -1,0 +1,81 @@
+31-08-2024 11:22:20    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:22:31    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:23:02    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:23:02 Error -The process cannot access the file 'D:\UBI_NACH_Prod\emandate\mms_s\mms_s\Logs\31-08-2024__error.log' because it is being used by another process.
+
+31-08-2024 11:33:08    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:57:34    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 11:57:34    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 12:15:30    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at NACH_Application.cls_General.GetUserObjFromSession()
+   at Site.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 12:19:47    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 13:07:52    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 13:19:30    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at NACH_Application.cls_General.GetUserObjFromSession()
+   at Site.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
+31-08-2024 13:27:46    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at Login.Page_Load(Object sender, EventArgs e)
+Thread was being aborted.
+
